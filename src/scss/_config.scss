@@ -1,0 +1,56 @@
+/* Configurations for Portfolio */
+// $website-width: 1200px;
+$background_color: #46637c;
+$primary-font-color: #f1eae7;
+
+.container {
+  // max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-family: "Roboto";
+  color: #f1eae7;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.readMoreBtn {
+  margin: 0.5rem;
+  border-radius: 7px;
+  border: 2px solid rgba(93, 190, 232, 0.5);
+  box-shadow: 0px 4px 7px #537089;
+  background-color: #f1eae7;
+  color: #537089;
+}
+@mixin easeOut {
+  transition: all 1s ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+body {
+  font-size: 22px;
+  font-family: "Kurale", serif;
+  background: $background_color;
+  line-height: 2.2rem;
+}

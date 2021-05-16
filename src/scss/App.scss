@@ -1,0 +1,57 @@
+@import "config";
+@import "mobile";
+@import "desktop";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  overflow: hidden;
+}
+p {
+  color: #f1eae7;
+}
+li {
+  list-style: none;
+}
+a {
+  font-size: 16px;
+  color: $primary-font-color;
+  font-weight: 600;
+  font-family: "kurale", serif;
+  text-decoration: none;
+}
+.header-left {
+  position: fixed;
+  top: 0;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+
+  h4 {
+    color: #fff;
+    font-size: 24px;
+  }
+}
+.circlePatternTop {
+  visibility: hidden;
+}
+.circlePatternBottom {
+  visibility: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  background: #e7b157;
+  .container {
+    width: 100%;
+  }
+}
