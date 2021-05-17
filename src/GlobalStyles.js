@@ -52,23 +52,40 @@ export const CirclePatternBottom = styled.img`
 `
 
 export const ButtonContainer = styled.div`
-width: 100%;
+position: relative;
 display:flex;
+gap:10px;
+justify-content:flex-start;
 flex-direction: row;
 align-items: left;
-justify-content:space-evenly;
-margin:0 -1.5rem;
+transition: all 0.3s ease-in;
+margin: 0 2rem;
+&:before {
+  content:'';
+  margin:0 -2rem;
+}
 
 
-@media screen and (max-width:960px) {
-  position: relative;
-  display:flex;
-  
-  /* display:block; */
+@media screen and (max-width:1200px) {
+    transition: all 0.3s ease-in;
+  &:after {
+  content:'';
+  justify-content:space-evenly;
+  margin:0 -2rem;
+}
+  text-align:center;
+  padding-left:15px;
+ 
+}
+@media screen and (max-width:630px) {
+  transition: all 0.3s ease-in;
+  &:before {
+  content:'';
+  margin:0 -2rem;
+}
   text-align:center;
   width: 100%;
  
-  /* align-items:center; */
 }
 `;
 export const Button = styled.a`
@@ -86,7 +103,6 @@ color:#f2f2f2;
 font-size: ${({ fontSmall }) => (fontSmall ? '16px' : '16px')};
 outline:none;
 border:none;
-
 cursor:pointer;
 
 &:hover{
@@ -97,11 +113,11 @@ cursor:pointer;
 .IconContext{
   
   @media screen and (max-width:960px) {
-
     display:none;
   }
 }
 @media screen and (max-width:960px) {
+
   text-align: center;
   margin-top:1rem;
   justify-content:center;

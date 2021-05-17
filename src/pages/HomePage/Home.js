@@ -16,6 +16,14 @@ justify-content:left;
 align-items: left;
 margin-top:13%;
 margin-left:-30%;
+
+@media screen and (max-width:960px) {
+  /* min-width:90vw; */
+/* margin-top:13%; */
+margin-left:0;
+  height:80vh;
+  min-width:50%;
+}
 `;
 
 
@@ -25,7 +33,9 @@ display:flex;
 top:15%;
 right:5%;
 justify-content:flex-end;
-
+@media screen and (max-width:960px) {
+display:none;
+}
 
 `;
 const Img = styled.img`
@@ -34,6 +44,7 @@ width: 100%;
 max-width: 1200px;
 z-index:-1;
 /* height:1024px; */
+
 `;
 const TopLineText = styled.h4`
 
@@ -41,12 +52,19 @@ font-size:36px;
 margin:1rem 0;
 text-align:left;
 font-family: 'Roboto', sans-serif;
+
+@media screen and (max-width:630px) {
+font-size:24px;
+}
 `;
 const TitleHeading = styled.h2`
 font-family: 'Roboto', sans-serif;
 font-size:48px;
 text-align:left;
 margin:2rem 0;
+@media screen and (max-width:630px) {
+font-size:36px;
+}
 `;
 const Lead = styled.h4`
 font-family: 'Roboto', sans-serif;
@@ -57,6 +75,9 @@ border-radius:4px;
 color:f2f2f2;
 font-weight:600;
 font-size:18px;
+@media screen and (max-width:630px) {
+font-size:16px;
+}
 `;
 
 const SocialIcons = styled.ul`

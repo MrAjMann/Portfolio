@@ -8,9 +8,9 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard"
 
 
 const ProjectsContainer = styled.section`
-width:100%;
-margin-top:10%;
 
+margin-top:10%;
+overflow-x:hidden;
 `;
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { IconContext } from "react-icons";
-import { Container,ButtonContainer,Button } from '../../GlobalStyles'
+import { Container } from '../../GlobalStyles'
 import { FaGithub, FaHome } from "react-icons/fa";
 
 
@@ -11,6 +11,7 @@ height:60vh;
 margin:2rem 0;
 width:100%;
 display:flex;
+
 flex-direction:column;
 justify-content:center;
 align-items:center;
@@ -29,7 +30,7 @@ width:100%;
 max-width:30rem;
 transform:translate(1rem);
 position:relative;
-justify-content:${({start}) =>(start ? 'flex-start' :'flex-end')};
+flex-direction: ${({imgStart}) => (imgStart ? 'row' : 'row-reverse')};
 @media screen and (max-width:960px) {
 margin:10px;
 min-width:80vw;
@@ -47,6 +48,11 @@ border-radius:0.3rem;
 @media screen and (max-width:960px) {
 transform: rotate(0deg);
 display:flex;
+object-fit:cover;
+
+/* max-width: 90vw; */
+width: 100%;
+padding:20px;
 justify-content: center;
 margin-left:-1rem;
 margin-bottom:1rem;
@@ -58,18 +64,21 @@ const ContentWrapper = styled.div`
 border: 1px solid #e7b35f;
 border-radius:4px;
 display:flex;
-flex-direction: ${({imgStart}) => (imgStart ? 'row' : 'row-reverse')};
+min-width:900px;
+max-width:1100px;
+width: 100%;
 justify-content:center;
+flex-direction: ${({imgStart}) => (imgStart ? 'row' : 'row-reverse')};
 align-items:center;
 
-width:50vw;
-padding:1rem;
+
 box-shadow: 2px 2px 7px 2px #444;
 
 @media screen and (max-width:960px) {
   flex-direction:column-reverse;
   justify-content:center;
-  width:95vw;
+  min-width:300px;
+max-width:95vw;
 }
 `;
 
@@ -78,9 +87,9 @@ const InnerCont = styled.div`
 position: relative;
 display:flex;
 flex-direction: column;
-justify-content:center;
+justify-content:flex-start;
 width:100%;
-margin-left:5rem;
+margin-left:6rem ;
 @media screen and (max-width:960px){
   margin-left:0rem;
   width:100%;
@@ -149,26 +158,102 @@ font-size:24px;
 
 
 `;
+export const ButtonContainer = styled.div`
+position: relative;
+display:flex;
+gap:10px;
+width: 100%;
+justify-content:flex-start;
+flex-direction: row;
+align-items: left;
+transition: all 0.3s ease-in;
+/* margin-left: 0 -2rem; */
 
+
+@media screen and (max-width:1200px) {
+    transition: all 0.3s ease-in;
+justify-content:center;
+  margin:1rem ;
+  
+
+  text-align:center;
+  padding-left:15px;
+ 
+}
+@media screen and (max-width:630px) {
+  transition: all 0.3s ease-in;
+  &:before {
+  content:'';
+  margin:0 -2rem;
+}
+  text-align:center;
+  width: 100%;
+ 
+}
+`;
+export const Button = styled.a`
+width: 150px;
+display:flex;
+justify-content:space-evenly;
+text-align: center;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 1) 1.95px 1.95px 2.6px;
+border-radius:4px;
+background:${({ primary }) => (primary ? '#e7b157' : '#5dbee8')};
+white-space: nowrap;
+padding:10px;
+color:#f2f2f2;
+font-size: ${({ fontSmall }) => (fontSmall ? '16px' : '16px')};
+outline:none;
+border:none;
+cursor:pointer;
+
+&:hover{
+  transition:all 0.3s ease-out;
+  transform: scale(1.1);
+}
+
+.IconContext{
+  @media screen and (max-width:960px) {
+    display:none;
+  }
+}
+@media screen and (max-width:960px) {
+
+  text-align: center;
+  margin-top:1rem;
+  justify-content:center;
+  align-items:center;
+  width:130px;
+  /* width: 100%; */
+  font-size:16px;
+  
+}
+`;
 
 const ProjectCard = ({
+  id,
   title,
   subTitle,
+  imgStartIsTrue,
   imgStart,
   img,
   tags,
   alt,
   start
 }) => {
+ 
   return (
     <IconContext.Provider value={{ color: '#f2f2f2', size: 34, className: "IconContext"}}>
+      
     <CardContainer >
       <Container>
-      <ContentWrapper imgStart={imgStart} >
-        <InnerCont>
-          <MetaTags>
-            <Tag> { tags }  </Tag>
-            <Tag> Canva </Tag>
+      <ContentWrapper imgStart={imgStart}  >
+            <InnerCont imgStartIsTrue={ imgStartIsTrue}>
+          <MetaTags className="MetaTags">     
+          {tags.map(function (tag, id) {
+           return <Tag key={id}>{tag}</Tag>     
+          })}      
           </MetaTags>
             <AppTitle>{ title }</AppTitle>
             <AppSubTitle>{subTitle}</AppSubTitle>
@@ -183,7 +268,8 @@ const ProjectCard = ({
     </ContentWrapper>
     </Container>
   </CardContainer>
-  </IconContext.Provider>
+
+      </IconContext.Provider>
   )
 }
 
