@@ -91,16 +91,24 @@ const Textarea = styled.textarea`
   return (
     <Container>
       <FormContainerRight>
-        <Form name="contact" method="POST" data-netlify="true">
+        <Form name="contact" action="/contact" method="POST" >
           <SubHeading>Get in touch today!</SubHeading>
+          <FormInputs>
+            <Input
+              type="hidden"
+              name="form-name"
+              value="contact"             
+              />
+          </FormInputs>
             <Label htmlFor="name"  >Name:</Label>
           <FormInputs>
             <Input
               type="text"
               name="name"
               placeholder="Enter your name"
-
-            />
+              required
+              
+              />
           </FormInputs>
             <Label htmlFor="email" >Email:</Label>
           <FormInputs>
@@ -108,32 +116,35 @@ const Textarea = styled.textarea`
               type="text"
               name="email"
               placeholder="Enter your email"
- 
-            />
+              required
+              
+              />
               
           </FormInputs>
             <Label htmlFor="subject" >Subject:</Label>
           <FormInputs>
             <Input
               type="text"
-              name="email"
+              name="subject"
               placeholder="Enter a Subject"
-
-            />       
+              
+              />       
           </FormInputs>
             <Label htmlFor="message" >Message:</Label>
           <FormInputs>
             <Textarea
-              type="text"
-              name="email"
+              
+              name="message"
               placeholder="Enter your message"
               cols="30"
               rows="5"
-            />       
+              required
+              />       
           </FormInputs>
           <Button primary style={{ marginBottom: '2rem',fontFamily:'Roboto', FontWeight: '600',color:'#fff',fontSize:'1.2rem'}} type="submit">Send Message</Button>
         </Form>
       </FormContainerRight>
+      
     </Container>
   )
 }
