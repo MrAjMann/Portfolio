@@ -91,7 +91,7 @@ const Textarea = styled.textarea`
   return (
     <Container>
       <FormContainerRight>
-        <Form name="contact" action="/contact" method="POST" >
+        <Form name="contact" action="/contact" method="POST"data-netlify="true" >
           <SubHeading>Get in touch today!</SubHeading>
           <FormInputs>
             <Input
