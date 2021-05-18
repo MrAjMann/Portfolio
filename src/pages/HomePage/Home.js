@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
 import { IconContext } from "react-icons";
 import styled from 'styled-components';
@@ -112,8 +113,8 @@ export default function Home(primary) {
         <TitleHeading>Anthony Manm</TitleHeading>  
         <Lead>UI Designer and Front-End Developer</Lead>
       <ButtonContainer>
-        <Button primary={ primary } href="/projects">View latest work</Button>
-        <Button href="/about">More about me</Button>
+        <Link to="/projects"><Button primary={ primary } >View latest work</Button></Link>
+        <Link to="/about"><Button >More about me</Button></Link>
       </ButtonContainer>
       <SocialIcons>
         <SocialItem href="http://github.com/MrAjMann" > <FaGithub /> </SocialItem>
