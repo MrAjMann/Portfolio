@@ -6,7 +6,6 @@ import CirclePattern from '../../assets/CirclePattern.svg'
 import ProjectCard from "../../components/ProjectCard/ProjectCard"
 
 
-
 const ProjectsContainer = styled.section`
 
 margin-top:10%;
@@ -39,10 +38,7 @@ const Projects = () => {
     <ProjectsContainer>
     <CirclePatternTop src={CirclePattern}  />
       <Container>
-
-        
-        <Heading>Projects</Heading>
-        
+        <Heading>Projects</Heading> 
         <ProjectCard {...ProjectCardObjOne}/>
         <ProjectCard {...ProjectCardObjTwo}/>
         <ProjectCard {...ProjectCardObjOne}/>

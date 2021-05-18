@@ -1,9 +1,12 @@
 export const ProjectCardObjOne = {
-  title: 'Lotus Loft',
-  subTitle:'Clothing Eccommerce Concept Design',
-  img: require('../../assets/LotusLoftLP.png').default,
-  alt: 'Landing Page of Lotus Loft',
-  tags: ["Canva", "Figma"],
+  id: 'comparitube',
+  title: 'CompariTube',
+  subTitle:'YouTube channel comparison app',
+  img: require('../../assets/CompariTube.png').default,
+  alt: 'Preview of compariTube',
+  tags: ["JavaScript","HTML", "SASS","Figma"],
+  GitRepo: 'https://github.com/RAMTeam/CompariTube.git',
+  ProjectPage: 'projects/comparitube',
   imgStartIsTrue:'',
   imgStart: '',
   start:''
@@ -14,7 +17,21 @@ export const ProjectCardObjTwo = {
   subTitle:'Ecommerce Application with user Authentication',
   img: require('../../assets/ThirdDimensionLP.png').default,
   alt: 'Landing Page of Lotus Loft',
-  tags: ["Canva", "JavaScript"],
+  tags: ["RubyonRails", "PostgreSQL"],
+  GitRepo: 'https://github.com/RAMTeam/compariTube.git',
+  ProjectPage: '/',
+  imgStartIsTrue:'',
+  imgStart: 'true',
+  start:'true'
+}
+export const ProjectCardObjThree = {
+  title: 'Third Dimension',
+  subTitle:'Ecommerce Application with user Authentication',
+  img: require('../../assets/ThirdDimensionLP.png').default,
+  alt: 'Landing Page of Lotus Loft',
+  tags: ["RubyonRails", "PostgreSQL"],
+  GitRepo: 'https://github.com/RAMTeam/compariTube.git',
+  ProjectPage: '/',
   imgStartIsTrue:'',
   imgStart: 'true',
   start:'true'

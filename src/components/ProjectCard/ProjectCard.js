@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { IconContext } from "react-icons";
 import { Container } from '../../GlobalStyles'
@@ -44,8 +44,10 @@ height:auto;
 transform: rotate(-10deg);
 object-fit:contain;
 border-radius:0.3rem;
+box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.25);
 
 @media screen and (max-width:960px) {
+
 transform: rotate(0deg);
 display:flex;
 object-fit:cover;
@@ -64,6 +66,7 @@ const ContentWrapper = styled.div`
 border: 1px solid #e7b35f;
 border-radius:4px;
 display:flex;
+
 min-width:900px;
 max-width:1100px;
 width: 100%;
@@ -78,7 +81,7 @@ box-shadow: 2px 2px 7px 2px #444;
   flex-direction:column-reverse;
   justify-content:center;
   min-width:300px;
-max-width:95vw;
+  max-width:95vw;
 }
 `;
 
@@ -91,6 +94,7 @@ justify-content:flex-start;
 width:100%;
 margin-left:6rem ;
 @media screen and (max-width:960px){
+  max-height:'400px' !important;
   margin-left:0rem;
   width:100%;
   align-items:center;
@@ -101,8 +105,9 @@ const MetaTags = styled.ul`
 display:flex;
 justify-content:left;
 align-items:center;
+flex-wrap:wrap;
 text-decoration:none;
-margin:-1rem;
+margin-top:1rem;
 width:100%;
 @media screen and (max-width:960px) {
  justify-content:center;
@@ -114,7 +119,7 @@ width:100%;
 
 const Tag = styled.li`
   display:flex;
-  width:80px;
+  min-width:80px;
   padding:0 6px;
   border-radius:25px;
   background-color:#333;
@@ -123,7 +128,7 @@ const Tag = styled.li`
   align-items:center;
   font-size:16px;
   flex-direction: column;
-  margin: 1rem 1rem;
+  margin: 1rem 0.2rem;
 
 `;
 
@@ -191,7 +196,7 @@ justify-content:center;
  
 }
 `;
-export const Button = styled.a`
+export const Button = styled.li`
 width: 150px;
 display:flex;
 justify-content:space-evenly;
@@ -235,6 +240,8 @@ const ProjectCard = ({
   id,
   title,
   subTitle,
+  ProjectPage,
+  GitRepo,
   imgStartIsTrue,
   imgStart,
   img,
@@ -249,7 +256,7 @@ const ProjectCard = ({
     <CardContainer >
       <Container>
       <ContentWrapper imgStart={imgStart}  >
-            <InnerCont imgStartIsTrue={ imgStartIsTrue}>
+      <InnerCont imgStartIsTrue={ imgStartIsTrue} style={{minHeight: '400px'}} >
           <MetaTags className="MetaTags">     
           {tags.map(function (tag, id) {
            return <Tag key={id}>{tag}</Tag>     
@@ -258,12 +265,12 @@ const ProjectCard = ({
             <AppTitle>{ title }</AppTitle>
             <AppSubTitle>{subTitle}</AppSubTitle>
           <ButtonContainer>
-            <Button href="http://github.com" target="_blank" rel="noopener noreferrer" fontSmall primary ><FaGithub/> GitHub </Button>
-            <Button href="/" fontSmall  ><FaHome /> View Project </Button>
+            <Button href={ GitRepo} target="_blank" rel="noopener noreferrer" fontSmall primary ><FaGithub/> GitHub </Button>
+            <Link to={ProjectPage}><Button fontSmall  ><FaHome /> View Project </Button></Link>
           </ButtonContainer>
       </InnerCont>
-          <ImgContainer start="start">
-            <Img src={img} alt={alt} ></Img>
+          <ImgContainer start="start" style={{maxWidth: '500px'}} >
+              <Img style={{maxWidth: '500px'}} src={img} alt={alt} ></Img>
           </ImgContainer>      
     </ContentWrapper>
     </Container>
