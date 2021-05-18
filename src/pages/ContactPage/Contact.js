@@ -93,7 +93,7 @@ const Textarea = styled.textarea`
       <FormContainerRight>
         <Form name="contact" method="POST" data-netlify="true">
           <SubHeading>Get in touch today!</SubHeading>
-            <Label htmlFor="name" >Name:</Label>
+            <Label htmlFor="name"  >Name:</Label>
           <FormInputs>
             <Input
               type="text"

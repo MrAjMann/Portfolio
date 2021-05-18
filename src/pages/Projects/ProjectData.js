@@ -4,7 +4,7 @@ const Ct = {
   subTitle: 'Designed and Developed by Roba Elshazly and  Anthony Mann ',
   challengeDesc: `At the end of March 2021 we were challenged to design and build an application in 24 hours. 
    The conditions were:`,
-  designDesc:'Ultricies aenean vitae tellus odio sapien, mauris sed. Eu enim neque felis id convallis arcu gravida congue sit. Bibendum vitae imperdiet cras erat pulvinar faucibus nullam pulvinar. Tortor netus elementum facilisis ac. Elit faucibus turpis vel est, quisque sed fermentum, mauris orci. Platea elit hac aliquet ullamcorper at ullamcorper amet. ',
+  designDesc:'The design of this application needed to be minimal and easy to use. We wanted to find a way to show users all the information they need without adding too many steps to the process. Since the application was created in just 24 hours, there is obviously a lot of room for improvement and I will update it in the future.',
   imgMain: require('../../assets/CompariTube.png').default,
   imgChallenge: require('../../assets/Hackathon/FirstSearchCompariTube.png').default,
   imgDesign: require('../../assets/Hackathon/StyleGuide.png').default,
