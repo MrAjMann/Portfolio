@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Button } from '../../GlobalStyles'
+import { Container } from '../../GlobalStyles'
 import styled from 'styled-components'
 
 
@@ -86,12 +86,82 @@ const Textarea = styled.textarea`
   border:none;
 `;
 
+export const ButtonContainer = styled.div`
+display: flex; 
+justify-content:center;
+flex-direction: row;
+
+align-items: center;
+transition: all 0.3s ease-in;
+margin: 0 2rem;
+
+
+
+@media screen and (max-width:1200px) {
+    transition: all 0.3s ease-in;
+
+  text-align:center;
+  padding-left:15px;
+ 
+}
+@media screen and (max-width:630px) {
+  transition: all 0.3s ease-in;
+  &:before {
+  content:'';
+  margin:0 -3rem;
+}
+  text-align:center;
+  width: 100%;
+ 
+}
+`;
+export const SubmitButton = styled.button`
+width: 150px;
+display:flex;
+justify-content:center;
+text-align: center;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 1) 1.95px 1.95px 2.6px;
+border-radius:4px;
+background:${({ primary }) => (primary ? '#e7b157' : '#5dbee8')};
+white-space: nowrap;
+padding:10px;
+color:#f2f2f2;
+font-size: ${({ fontSmall }) => (fontSmall ? '16px' : '16px')};
+outline:none;
+border:none;
+cursor:pointer;
+
+&:hover{
+  transition:all 0.3s ease-out;
+  transform: scale(1.1);
+}
+
+.IconContext{
+  
+  @media screen and (max-width:960px) {
+    display:none;
+  }
+}
+@media screen and (max-width:960px) {
+
+  text-align: center;
+  margin-top:1rem;
+  justify-content:center;
+  align-items:center;
+  width:130px;
+  /* width: 100%; */
+  font-size:16px;
+  
+}
+`;
+
   const Contact = () => {
 
   return (
     <Container>
       <FormContainerRight>
-        <Form name="contact" method="post" method="POST"data-netlify="true" >
+        <Form name="contact" method="post" data-netlify="true" >
           <SubHeading>Get in touch today!</SubHeading>
           <input type="hidden" name="form-name" value="contact" />
             <Label htmlFor="name"  >Name:</Label>
@@ -135,7 +205,9 @@ const Textarea = styled.textarea`
               required
               />       
           </FormInputs>
-          <Button primary style={{ marginBottom: '2rem',fontFamily:'Roboto', FontWeight: '600',color:'#fff',fontSize:'1.2rem'}} type="submit">Send Message</Button>
+          <ButtonContainer>
+          <SubmitButton primary style={{ marginBottom: '2rem',fontFamily:'Roboto', FontWeight: '600',color:'#fff',fontSize:'1.2rem'}} type="submit">Send Message</SubmitButton>
+          </ButtonContainer>
         </Form>
       </FormContainerRight>
       
