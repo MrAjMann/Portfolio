@@ -15,11 +15,11 @@ export const ProjectCardObjOne = {
 export const ProjectCardObjTwo = {
   title: 'Third Dimension',
   subTitle:'Ecommerce Application with user Authentication',
-  img: require('../../assets/ThirdDimensionLP.png').default,
+  img: require('../../assets/ThirdDimension/ThirdDimensionLP.png').default,
   alt: 'Landing Page of Lotus Loft',
   tags: ["RubyonRails", "PostgreSQL"],
   GitRepo: 'https://github.com/RAMTeam/compariTube.git',
-  ProjectPage: '/',
+  ProjectPage: 'projects/thirddimension',
   imgStartIsTrue:'',
   imgStart: 'true',
   start:'true'
@@ -27,7 +27,7 @@ export const ProjectCardObjTwo = {
 export const ProjectCardObjThree = {
   title: 'Third Dimension',
   subTitle:'Ecommerce Application with user Authentication',
-  img: require('../../assets/ThirdDimensionLP.png').default,
+  img: require('../../assets/ThirdDimension/ThirdDimensionLP.png').default,
   alt: 'Landing Page of Lotus Loft',
   tags: ["RubyonRails", "PostgreSQL"],
   GitRepo: 'https://github.com/RAMTeam/compariTube.git',

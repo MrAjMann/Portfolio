@@ -41,7 +41,6 @@ const Projects = () => {
         <Heading>Projects</Heading> 
         <ProjectCard {...ProjectCardObjOne}/>
         <ProjectCard {...ProjectCardObjTwo}/>
-        <ProjectCard {...ProjectCardObjOne}/>
       </Container>
     
     <CirclePatternBottom src={CirclePattern} />
