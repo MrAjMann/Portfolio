@@ -9,21 +9,22 @@ import ProjectB from "./pages/Projects/ThirdDimension";
 import NavBar from "./components/NavBar/NavBar";
 import Post from "./pages/Post";
 import './scss/App.scss'
-
+import NotFound from "./NotFound"
 
 function App() {
   
   return (
   <BrowserRouter>
       <NavBar/>
-    <Switch>
-      <Route component ={Home} path='/' exact/>
-      <Route component ={About} path='/about' />
-      <Route component ={Contact} path='/contact' />
+      <Switch>
+      <Route component ={Home} exact path='/' />
+      <Route component ={About} exact path='/about' />
+      <Route component={Contact} exact path='/contact' />  
       <Route component ={Projects} exact path='/projects' />
-      <Route component ={ProjectA}  path='/projects/comparitube' />
-      <Route component ={ProjectB}  path='/projects/thirddimension' />
+      <Route component ={ProjectA}  exact path='/projects/comparitube' />
+      <Route component ={ProjectB}  exact path='/projects/thirddimension' />
       <Route component ={Post} path='/post' />
+      <Route component={NotFound}/>
     </Switch>
   </BrowserRouter>
   )
