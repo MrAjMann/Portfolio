@@ -2,30 +2,71 @@ import React from 'react'
 import { Container } from '../../GlobalStyles'
 import styled from 'styled-components'
 
+const InnerContainer = styled.div`
+  display: flex;
+  width: 70%;
+  height:90vh;
+  justify-content:center;
+  align-items:center;
 
+  @media screen and (max-width:960px){
+    margin-top:2rem;
+    flex-direction:column-reverse;
+
+    width:100%;
+    overflow-x: hidden;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+  }
+`;
 
 const FormContainerRight = styled.div`
   display:flex;
-  justify-content:center;
+
+  justify-content:flex-end;
   align-items:center;
-  margin:auto;
+  width:100%;
   height:100vh;
   text-align:left;
   height:100%;
   
 @media screen and (max-width:960px) {
-  min-width:90vw;
+  height:100%;
+  max-width:90vw;
+  justify-content:center;
   
-  margin-left:1rem;
-  overflow-x: hidden;
 }
 `;
 
 
+const ContactInformation = styled.div`
+display: flex;
+flex-direction: column;
+border-radius:5px;
+min-width:500px;
+margin:0 2rem;
+justify-content:baseline;
+align-items:center;
+height:55%;
+background-color:#efb158;
+width:100%;
+@media screen and (max-width:960px){
+margin-top:3rem;
+height:100%;
+align-items:center;
+justify-content:center;
+width:100%;
+}
+`;
 const Form = styled.form`
 border-radius: 5px;
+@media screen and (max-width:960px) {
+  margin-top:1rem;
+  height:100%
+  
+  }
 `;
-
 
 const SubHeading = styled.h2`
 margin-top: 3rem;
@@ -65,8 +106,8 @@ const Input = styled.input`
   width: 100%;
   height: 100%;
   box-shadow: none;
+  border:none;
   border-radius: 15px;
-  border: solid 1px #fff;
   background: transparent;
   color: #f2f2f2;
   padding: 15px 25px 15px 25px;
@@ -76,7 +117,7 @@ const Input = styled.input`
 
 const Textarea = styled.textarea`
   box-shadow: none;
-  border-radius: 15pxpx;
+  border-radius: 15px;
   background: transparent;
   resize:none;
   color: #f2f2f2;
@@ -94,8 +135,6 @@ flex-direction: row;
 align-items: center;
 transition: all 0.3s ease-in;
 margin: 0 2rem;
-
-
 
 @media screen and (max-width:1200px) {
     transition: all 0.3s ease-in;
@@ -117,17 +156,21 @@ margin: 0 2rem;
 `;
 export const SubmitButton = styled.button`
 width: 150px;
+height:60px;
+font-size:1.2rem;
+font-family:'Roboto', sans-serif;
+font-weight:bold;
 display:flex;
+align-items: center;
 justify-content:center;
 text-align: center;
 border-radius: 5px;
 box-shadow: rgba(0, 0, 0, 1) 1.95px 1.95px 2.6px;
 border-radius:4px;
-background:${({ primary }) => (primary ? '#e7b157' : '#5dbee8')};
-white-space: nowrap;
+background:${({ primary }) => (primary ? '#e7b158' : '#5dbee8')};
+
 padding:10px;
 color:#f2f2f2;
-font-size: ${({ fontSmall }) => (fontSmall ? '16px' : '16px')};
 outline:none;
 border:none;
 cursor:pointer;
@@ -155,14 +198,36 @@ cursor:pointer;
   
 }
 `;
+const InfoList = styled.ul`
+display:flex;
+flex-direction:column;
+text-align:justify;
+`;
+const ListItem = styled.li`
+width: 100%;
+font-weight:600;
+font-size:1.2rem;
+margin:1rem 0;
+color:#202628;
+`;
 
-  const Contact = () => {
+const Contact = () => {
 
   return (
     <Container>
+      <InnerContainer>
+
+      <ContactInformation>
+          <SubHeading>Get in touch today!</SubHeading>
+          <InfoList >
+            <ListItem>Anthony Mann</ListItem>
+            <ListItem>anthonyjmann87@gmail.com</ListItem>
+            <ListItem>0428634295</ListItem>
+          </InfoList>
+
+      </ContactInformation>
       <FormContainerRight>
         <Form name="contact" method="post" data-netlify="true" >
-          <SubHeading>Get in touch today!</SubHeading>
           <input type="hidden" name="form-name" value="contact" />
             <Label htmlFor="name"  >Name:</Label>
           <FormInputs>
@@ -206,11 +271,12 @@ cursor:pointer;
               />       
           </FormInputs>
           <ButtonContainer>
-          <SubmitButton primary style={{ marginBottom: '2rem',fontFamily:'Roboto', FontWeight: '600',color:'#fff',fontSize:'1.2rem'}} type="submit">Send Message</SubmitButton>
+          <SubmitButton primary  type="submit">Send Message</SubmitButton>
           </ButtonContainer>
         </Form>
       </FormContainerRight>
       
+              </InnerContainer>
     </Container>
   )
 }
