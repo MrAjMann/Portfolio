@@ -25,48 +25,21 @@ align-items:center;
 }
 `;
 
-export const CirclePatternTop = styled.img`
-  visibility: visible;
-  position: fixed;
-  width: 168px;
-  height: 112px;
-  top: 15%;
-  left: 5%;
 
-  @media screen and (max-width:1100px) {
- display:none;
-
-}
-`
-export const CirclePatternBottom = styled.img`
-     visibility: visible;
-      position: fixed;
-      width: 168px;
-      height: 112px;
-      bottom: 15%;
-      left: 5%;
-      @media screen and (max-width:1100px) {
-      display:none;
-
-}
-`
 
 export const ButtonContainer = styled.div`
 position: relative;
 display:flex;
-gap:10px;
-justify-content:flex-start;
+
+justify-content:center;
 flex-direction: row;
-align-items: left;
+align-items: center;
 transition: all 0.3s ease-in;
-margin: 0 2rem;
-&:before {
-  content:'';
-  margin:0 -2rem;
-}
+/* margin: 0 2rem; */
 
 
-@media screen and (max-width:1200px) {
+
+/* @media screen and (max-width:1200px) {
     transition: all 0.3s ease-in;
   &:after {
   content:'';
@@ -76,8 +49,8 @@ margin: 0 2rem;
   text-align:center;
   padding-left:15px;
  
-}
-@media screen and (max-width:630px) {
+} */
+/* @media screen and (max-width:960px) {
   transition: all 0.3s ease-in;
   &:before {
   content:'';
@@ -86,22 +59,23 @@ margin: 0 2rem;
   text-align:center;
   width: 100%;
  
-}
+} */
 `;
 export const Button = styled.a`
 width: 150px;
 display:flex;
 justify-content:space-evenly;
 text-align: center;
-border-radius: 5px;
+font-family: 'Roboto', sans-serif;
 box-shadow: rgba(0, 0, 0, 1) 1.95px 1.95px 2.6px;
 border-radius:4px;
 background:${({ primary }) => (primary ? '#e7b157' : '#5dbee8')};
 white-space: nowrap;
 padding:10px;
 color:#f2f2f2;
-font-size: ${({ fontSmall }) => (fontSmall ? '16px' : '16px')};
-outline:none;
+font-weight:700;
+font-size:18px;
+/* outline:none; */
 border:none;
 cursor:pointer;
 

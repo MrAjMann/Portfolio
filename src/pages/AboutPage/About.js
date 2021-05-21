@@ -2,61 +2,69 @@ import React from "react";
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
 import { IconContext } from "react-icons";
 import styled from 'styled-components';
-import { Container, CirclePatternTop, CirclePatternBottom} from '../../GlobalStyles'
-import CirclePattern from '../../assets/CirclePattern.svg';
-import backgroundImg from '../../assets/ProfileImage.png'
-
-
+import { Container} from '../../GlobalStyles'
+import profileImg from '../../assets/ProfileImage.jpg'
 
 
 // Styling 
 
 const ContentWrapper = styled.section`
-  display:flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-items: left;
-  margin-top:13%;
-  margin-left:20%;
-  text-align:left;
-  padding:10px;
-  width: 60%;
-@media screen and (max-width:960px) {
-  min-width:90vw;
-  margin-left:0;
-  overflow-x: hidden;
+position: relative;
+margin-top:5%;
+padding: 1rem;
+display:flex;
+flex-direction:row-reverse;
+height:80vh;
+border: 1px solid #e7b35f;
+box-shadow: 2px 2px 7px 2px #444;
+justify-content:center;
+align-items: center;
+width:80%;
+
+@media screen and (max-width:1600px) {
+flex-direction:column;
+min-width:300px;
+width:60%;
+height:100%;
+margin:1rem 0;
+padding:0;
+max-width:900px;
+
 }
 `;
 
 const ImgContainer = styled.div`
-  display:flex;
-  width:100% ;
-  align-items:right;
-  justify-content:center;
-  flex-wrap:wrap;
-`;
-const Img = styled.img`
-  align-self: baseline;
-  max-width:300px;
-  z-index:-1;
-@media screen and (max-width:930px) {
-  width:100%;
-  margin-left:3rem;
-  justify-content:flex-end;
-  align-items:center;
-}
-`;
-const TitleHeading = styled.h2`
-  font-family: 'Roboto', sans-serif;
-  font-size:48px;
-  width: 100%;
-  margin:2rem 0;
-@media screen and (max-width:630px) {
-  font-size:36px;
-  padding:10px;
-  width:100vw;
+flex:1 1 30%;
+margin-top:1%;
+@media screen and (max-width:960px) {
+max-width:60vw;
+align:center;
 
 }
+
+`;
+const Img = styled.img`
+object-fit:contain;
+min-width:600px;
+max-height:75vh;
+width: 100%;
+max-width: 800px;
+z-index:-1;
+
+@media screen and (max-width:960px){
+min-width:150px;
+padding:1rem;
+max-width: 600px;
+
+}
+
+`;
+const LeftPanelWrapper = styled.div`
+flex:1 1 40%;
+gap:1rem;
+padding:1rem;
+flex-direction: column;
+
 `;
 const SubHeading = styled.h4`
   font-family: 'Roboto', sans-serif;
@@ -66,25 +74,23 @@ const SubHeading = styled.h4`
   color:#e7b157;
   font-weight:600;
   font-size:24px;
-@media screen and (max-width:630px) {
+@media screen and (max-width:1200px) {
   font-size:18px;
   padding:10px;
-  width:100vw;
+  /* width:100vw; */
 }
 `;
 
 const Desc = styled.p`
-  display:flex;
   width:100%;
-  flex-wrap:wrap;
-  flex-direction:column;
-  align-items:left;
-  justify-content:flex-start;
+  justify-content:center; 
+  align-items:center; 
   
-@media screen and (max-width:630px) {
-  padding:10px;
+@media screen and (max-width:1200px) {
+  justify-content:center; 
+  /* padding:10px;
   width:100vw;
-  font-size:16px;
+  font-size:16px; */
 }
   `;
 
@@ -102,7 +108,7 @@ const Lead = styled.h6`
   
 `;
 const Paragraph = styled.p`
-  width:60%;
+  /* width:60%; */
   margin:1rem 0;
   font-size:18px;
 @media screen and (max-width:630px) {
@@ -113,13 +119,11 @@ const Paragraph = styled.p`
 `;
 
 const SocialIcons = styled.ul`
-  margin:0.5rem 8rem;
   display:flex;
-  justify-content: left;
-  flex-direction: row;
-  align-items:left;
+  justify-content: center;
+  align-items:center;
 @media screen and (max-width: 960px){
-  margin:0 3rem;;
+  justify-content:center;
   width:100%;
   align-items:center;
 }
@@ -139,12 +143,11 @@ const About = () => {
   return (
 <IconContext.Provider value={{ size: 34, className: "IconContext"}}>
 <Container>
-  <CirclePatternTop src={CirclePattern} />
 <ContentWrapper>
-    <TitleHeading>About Me</TitleHeading>
   <ImgContainer >
-    <Img src={backgroundImg}  ></Img>
-  </ImgContainer> 
+    <Img src={profileImg} width="800px" ></Img>
+  </ImgContainer>
+          <LeftPanelWrapper>
     <SubHeading>Hello, I'm Anthony and this is my why...</SubHeading>
   <Desc> 
     <Lead>
@@ -155,7 +158,7 @@ const About = () => {
               For the past 4 years, I have worked in a Aged Care facility helping residents with varying physical and mental abilities make the most of the years they have left. However, I always felt that I could do more, just not within the confines of the facility.
     </Paragraph>
   </Desc>
-  <Desc>
+    <Desc>
 
     <Lead>
           …Did the soul work to identify my next step, and took it. 
@@ -167,13 +170,14 @@ const About = () => {
           Now I understand that not everyone can make the next Uber, but that day I knew I could make a difference as a developer.
     </Paragraph>
   </Desc>
+  </LeftPanelWrapper>
+</ContentWrapper>
   <SocialIcons>
     <SocialItem href="http://github.com/MrAjMann" > <FaGithub /> </SocialItem>
     <SocialItem href="https://twitter.com/MyCodingJourne3"> <FaTwitter /> </SocialItem>
     <SocialItem href="https://www.linkedin.com/in/anthonyjmann87/"> <FaLinkedin /> </SocialItem> 
   </SocialIcons>
-</ContentWrapper>
-    <CirclePatternBottom src={CirclePattern} /> 
+    
 </Container>
 </IconContext.Provider>
   )

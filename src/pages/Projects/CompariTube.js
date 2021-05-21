@@ -160,7 +160,7 @@ const CompariTube = () => {
         <Button style={{ margin: '2rem 0', fontSize: "24px" }} primary href="https://tubicompare.herokuapp.com/" target="_blank" rel="noopener noreferrer">Live Site</Button>
         
         <ImgWrapper>
-          <Img src={imgMain} width="800px" />
+          <Img src={imgMain} width="800px" alt="CompariTube application main Image"/>
         </ImgWrapper>
         <Desc  >
       <InnerContainer>
@@ -183,7 +183,7 @@ const CompariTube = () => {
         </InnerText>
       </InnerContainer>
         <ImgWrapper>
-          <Img src={imgFirstSearch} width="800px"/>
+          <Img src={imgFirstSearch} width="800px" alt="CompariTube application first search Image"/>
         </ImgWrapper>
         </Desc>
         <Desc imgStart>
@@ -196,7 +196,7 @@ const CompariTube = () => {
       </InnerText>
         </InnerContainer>
         <ImgWrapper>
-          <Img src={imgStyleGuid} width="800px" />
+          <Img src={imgStyleGuid} width="800px" alt="CompariTube application style Guide Image"/>
         </ImgWrapper>
         </Desc>        
         <FigmaEmbed>

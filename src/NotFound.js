@@ -85,7 +85,7 @@ const NotFound = () => (
     <IconContext.Provider value={{ color: '#f2f2f2', size: 34, className: "IconContext" }}>
       
     <ImgWrapper>
-       <Img src={errorImg} />
+       <Img src={errorImg} alt="Error404 Page Image"/>
     </ImgWrapper>
 
     <Link to="/" >

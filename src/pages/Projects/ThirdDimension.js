@@ -159,7 +159,7 @@ const ThirdDimension = () => {
         <SubTitle>Designed and Developed by Anthony Mann</SubTitle>
         <Button style={{margin: '2rem 0', fontSize: "24px"}} primary href="https://thirddimension.herokuapp.com/" target="_blank" rel="noopener noreferrer">Live Site</Button>
         <ImgWrapper>
-          <Img src={ThirdDimensionLP} width="800px" />
+          <Img src={ThirdDimensionLP} width="800px" alt="Main Image of thirdDimension car features Landing Page"/>
         </ImgWrapper>
         <Desc  >
       <InnerContainer>
@@ -185,7 +185,7 @@ const ThirdDimension = () => {
         </InnerText>
       </InnerContainer>
         <ImgWrapper>
-            <Img src={imgShopPage}width="800px"/>
+            <Img src={imgShopPage}width="800px" alt="Second Image of thirdDimension car features shop page"/>
         </ImgWrapper>
         </Desc>
         <Desc imgStart>
@@ -198,7 +198,7 @@ const ThirdDimension = () => {
            </InnerText>
         </InnerContainer>
         <ImgWrapper>
-          <Img src={imgLoginMobile } width="320px" height="568px" />
+          <Img src={imgLoginMobile } width="320px" height="568px" alt="Main Image of thirdDimension car features Mobile Login Page"/>
         </ImgWrapper>
         </Desc>        
         <FigmaEmbed>

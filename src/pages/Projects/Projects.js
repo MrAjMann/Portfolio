@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
 import {ProjectCardObjOne,ProjectCardObjTwo} from './Data'
-import {Container, CirclePatternTop, CirclePatternBottom} from'../../GlobalStyles'
-import CirclePattern from '../../assets/CirclePattern.svg'
+import {Container} from'../../GlobalStyles'
+
 import ProjectCard from "../../components/ProjectCard/ProjectCard"
 
 
@@ -36,14 +36,14 @@ margin-top:3rem;
 const Projects = () => {
   return(
     <ProjectsContainer>
-    <CirclePatternTop src={CirclePattern}  />
+ 
       <Container>
         <Heading>Projects</Heading> 
         <ProjectCard {...ProjectCardObjOne}/>
         <ProjectCard {...ProjectCardObjTwo}/>
       </Container>
     
-    <CirclePatternBottom src={CirclePattern} />
+
   </ProjectsContainer> 
   )   
 }
