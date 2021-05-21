@@ -99,10 +99,10 @@ const Lead = styled.h6`
   font-size:20px;
   font-weight:600;
   margin:0.5rem 0;
-  @media screen and (max-width:630px) {
+  @media screen and (max-width:1200px) {
   word-wrap:wrap;
   padding:10px;
-  width:80vw;
+  /* width:80vw; */
   font-size:16px;
 }
   
@@ -112,7 +112,7 @@ const Paragraph = styled.p`
   margin:1rem 0;
   font-size:18px;
 @media screen and (max-width:630px) {
-  width:80%;
+  /* width:80%; */
   font-size:16px;
   flex-wrap:nowrap;
 }
