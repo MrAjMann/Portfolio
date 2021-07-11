@@ -7,8 +7,7 @@ To design and develop a Portfolio that both looks great and displays my skills a
 
 ## Tech Used
 
--React.js
-
+- React.js
 - Netlify
 - HTML
 - SASS
