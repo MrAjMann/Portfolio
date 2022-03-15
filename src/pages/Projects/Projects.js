@@ -4,6 +4,7 @@ import {
   ProjectCardObjOne,
   ProjectCardObjTwo,
   ProjectCardObjThree,
+  ProjectCardObjFour,
 } from "./Data";
 import { Container } from "../../GlobalStyles";
 
@@ -41,6 +42,7 @@ const Projects = () => {
         <ProjectCard {...ProjectCardObjOne} />
         <ProjectCard {...ProjectCardObjTwo} />
         <ProjectCard {...ProjectCardObjThree} />
+        <ProjectCard {...ProjectCardObjFour} />
       </Container>
     </ProjectsContainer>
   );

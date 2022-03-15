@@ -1,4 +1,17 @@
 export const ProjectCardObjOne = {
+  id: "devsearch",
+  title: "DevSearch.io",
+  subTitle: "Developer Job Search Engine",
+  img: require("../../assets/DevSearch/DevSearchLandingPage.png").default,
+  alt: "Preview of DevSearch.io",
+  tags: ["React", "Axios", "MongoDb", "Figma", "Styled Components"],
+  GitRepo: "https://github.com/devsearch-team/devsearch",
+  ProjectPage: "projects/devsearch",
+  imgStartIsTrue: "",
+  imgStart: "",
+  start: "",
+};
+export const ProjectCardObjTwo = {
   id: "comparitube",
   title: "CompariTube",
   subTitle: "YouTube channel comparison app",
@@ -8,11 +21,11 @@ export const ProjectCardObjOne = {
   GitRepo: "https://github.com/RAMTeam/CompariTube.git",
   ProjectPage: "projects/comparitube",
   imgStartIsTrue: "",
-  imgStart: "",
-  start: "",
+  imgStart: "true",
+  start: "true",
 };
 
-export const ProjectCardObjTwo = {
+export const ProjectCardObjThree = {
   title: "Third Dimension",
   subTitle: "Ecommerce Application with user Authentication",
   img: require("../../assets/ThirdDimension/ThirdDimensionLP.png").default,
@@ -21,10 +34,10 @@ export const ProjectCardObjTwo = {
   GitRepo: "https://github.com/RAMTeam/compariTube.git",
   ProjectPage: "projects/thirddimension",
   imgStartIsTrue: "",
-  imgStart: "true",
-  start: "true",
+  imgStart: "",
+  start: "",
 };
-export const ProjectCardObjThree = {
+export const ProjectCardObjFour = {
   title: "Arcade Secretary",
   subTitle: "Arcade Secretary is a score-based speed typing game",
   img: require("../../assets/ArcadeSecretary/LandingPage.png").default,
@@ -33,6 +46,6 @@ export const ProjectCardObjThree = {
   GitRepo: "https://github.com/Hack-Overflow-Team/Arcade-Secretary",
   ProjectPage: "projects/arcadesecretary",
   imgStartIsTrue: "",
-  imgStart: "",
-  start: "",
+  imgStart: "true",
+  start: "true",
 };
