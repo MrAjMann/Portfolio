@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import styled from "styled-components";
@@ -64,7 +65,7 @@ const LeftPanelWrapper = styled.div`
   }
 `;
 
-const SubHeading = styled.h4`
+const SubHeading = styled.h1`
   font-family: "Roboto", sans-serif;
   margin: 1.5rem 0;
   text-align: left;
@@ -184,10 +185,25 @@ const SocialItem = styled.a`
 const About = () => {
   return (
     <IconContext.Provider value={{ size: 34, className: "IconContext" }}>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name="description"
+          content="About Anthony and his journey from a Personal Carer to a Website Developer"
+        />
+        <link rel="canonical" href="http://anthonyjmann.com/about" />
+      </Helmet>
       <Container>
         <ContentWrapper>
           <ImgContainer>
-            <Img src={profileImg} width="800px"></Img>
+            <Img
+              src={profileImg}
+              alt="Image of Anthony"
+              width="800px"
+              height="100%"
+              loading="lazy"
+              title="Profile Image"
+            ></Img>
           </ImgContainer>
           <LeftPanelWrapper>
             <SubHeading>Hello, I'm Anthony and this is my why...</SubHeading>

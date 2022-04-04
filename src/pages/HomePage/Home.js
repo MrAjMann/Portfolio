@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import styled from "styled-components";
@@ -58,7 +59,7 @@ const LeftPanelWrapper = styled.div`
   padding: 1rem;
   flex-direction: column;
 `;
-const TopLineText = styled.h4`
+const TopLineText = styled.h1`
   font-size: 30px;
   margin: 1rem 0;
   text-align: center;
@@ -79,7 +80,7 @@ const TitleHeading = styled.h2`
   }
 `;
 
-const Lead = styled.h4`
+const Lead = styled.h3`
   font-family: "Roboto", sans-serif;
   margin: 2rem 0;
   text-align: center;
@@ -111,25 +112,40 @@ const SocialItem = styled.a`
 export default function Home(primary) {
   return (
     <IconContext.Provider value={{ size: 34, className: "IconContext" }}>
+      <Helmet>
+        <title>Home Page</title>
+        <meta
+          name="description"
+          content="Welcome to the portfolio of Anthony Mann, here you will get a genreal idea of my skills and general processes used when I build websites"
+        />
+        <link rel="canonical" href="http://anthonyjmann.com/" />
+      </Helmet>
       <Container>
         <ContentWrapper>
           <ImgContainer>
             <Img
               src={backgroundImg}
+              title="Person sitting with laptop illustration"
               alt="Person sitting with laptop illustration"
+              width="800px"
+              height="100%"
             ></Img>
           </ImgContainer>
           <LeftPanelWrapper>
-            <TopLineText>Hello, I'm</TopLineText>
+            <TopLineText>Hey how's it going, I'm</TopLineText>
             <TitleHeading>Anthony Mann</TitleHeading>
             <Lead>UI Designer and Front-End Developer</Lead>
             <ButtonContainer>
-              <Link to="/projects">
+              <Link name="View Latest Work" to="/projects">
                 <Button primary={primary}>View latest work</Button>
               </Link>
             </ButtonContainer>
             <SocialIcons>
-              <SocialItem href="http://github.com/MrAjMann">
+              <SocialItem
+                name="Github"
+                href="https://github.com/MrAjMann"
+                className="GithubLink"
+              >
                 {" "}
                 <FaGithub />{" "}
               </SocialItem>

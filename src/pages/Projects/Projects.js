@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import styled from "styled-components";
 import {
   ProjectCardObjOne,
@@ -37,6 +38,14 @@ const Heading = styled.h2`
 const Projects = () => {
   return (
     <ProjectsContainer>
+      <Helmet>
+        <title>Projects</title>
+        <meta
+          name="description"
+          content="View all of my work, including what was used to build them and a links to the project itself"
+        />
+        <link rel="canonical" href="http://anthonyjmann.com/projects" />
+      </Helmet>
       <Container>
         <Heading>Projects</Heading>
         <ProjectCard {...ProjectCardObjOne} />
