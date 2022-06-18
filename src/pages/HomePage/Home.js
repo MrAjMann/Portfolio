@@ -149,10 +149,6 @@ export default function Home(primary) {
                 {" "}
                 <FaGithub />{" "}
               </SocialItem>
-              <SocialItem href="https://twitter.com/MyCodingJourne3">
-                {" "}
-                <FaTwitter />{" "}
-              </SocialItem>
               <SocialItem href="https://www.linkedin.com/in/anthonyjmann87/">
                 {" "}
                 <FaLinkedin />{" "}

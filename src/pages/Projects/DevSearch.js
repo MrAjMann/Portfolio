@@ -159,7 +159,7 @@ const DevSearch = () => {
         <Button
           style={{ margin: "2rem 0", fontSize: "24px" }}
           primary
-          href="https://tubicompare.herokuapp.com/"
+          href="https://www.devsearch.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
