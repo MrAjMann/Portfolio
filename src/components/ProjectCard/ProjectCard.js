@@ -6,8 +6,7 @@ import { Container } from "../../GlobalStyles";
 import { FaGithub, FaHome } from "react-icons/fa";
 
 const CardContainer = styled.div`
-  height: 60vh;
-  margin: 2rem 0;
+  margin: 3rem 0;
   width: 100%;
   display: flex;
 
@@ -38,9 +37,11 @@ const ImgContainer = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  /* aspect-ratio: auto; */
+  max-height: 100%;
   transform: rotate(-10deg);
-  object-fit: contain;
+  /* object-fit: contain; */
   border-radius: 0.3rem;
   box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -64,7 +65,7 @@ const ContentWrapper = styled.div`
   display: flex;
 
   min-width: 900px;
-  max-width: 1100px;
+  max-width: 1300px;
   width: 100%;
   justify-content: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row" : "row-reverse")};
@@ -129,6 +130,8 @@ const AppTitle = styled.h1`
   font-size: 48px;
   font-family: "Roboto", sans-serif;
   margin: 1.5rem 0;
+  padding: 0 10px;
+  line-height: 1;
   @media screen and (max-width: 960px) {
     font-size: 36px;
     text-align: center;
@@ -151,11 +154,11 @@ const AppSubTitle = styled.p`
 export const ButtonContainer = styled.div`
   position: relative;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   justify-content: flex-start;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
   transition: all 0.3s ease-in;
   /* margin-left: 0 -2rem; */
 

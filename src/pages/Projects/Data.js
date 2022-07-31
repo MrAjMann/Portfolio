@@ -1,3 +1,17 @@
+export const ProjectCardObjCurrent = {
+  id: "petretreat",
+  title:
+    "Customisable fullstack application for Boarding Kennels and Pet Retreats",
+  subTitle: "This is still a work in progress",
+  img: require("../../assets/PetRetreat/Landing-Page.png").default,
+  alt: "Landing page for a fictitious Pet retreat company",
+  tags: ["NextJS", "tRPC", "MySQL", "Figma", "Prisma", "PlanetScale"],
+  GitRepo: "https://github.com/MrAjMann/BoardingKennel",
+  ProjectPage: "projects/petretreat",
+  imgStartIsTrue: "",
+  imgStart: "",
+  start: "",
+};
 export const ProjectCardObjOne = {
   id: "devsearch",
   title: "DevSearch.io",
@@ -8,8 +22,8 @@ export const ProjectCardObjOne = {
   GitRepo: "https://github.com/devsearch-team/devsearch",
   ProjectPage: "projects/devsearch",
   imgStartIsTrue: "",
-  imgStart: "",
-  start: "",
+  imgStart: "true",
+  start: "true",
 };
 export const ProjectCardObjTwo = {
   id: "comparitube",
@@ -21,8 +35,8 @@ export const ProjectCardObjTwo = {
   GitRepo: "https://github.com/RAMTeam/CompariTube.git",
   ProjectPage: "projects/comparitube",
   imgStartIsTrue: "",
-  imgStart: "true",
-  start: "true",
+  imgStart: "",
+  start: "",
 };
 
 export const ProjectCardObjThree = {
